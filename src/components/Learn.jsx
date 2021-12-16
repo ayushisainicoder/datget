@@ -1,29 +1,55 @@
 import React, { Component } from 'react'
 import Employee from './Employee'
 
-export default class Learn extends Component{
-    constructor(){
-        super();
-        this.state = {
-            id : 101
-        };
-    }
-    clickHandle=(id)=>{
-        console.log("Button clicked");
-        // this.setState({id:501});
-        this.setState({ id: this.state.id + 2 });
+
+
+// unmounting
+// export default class Leran extends Component{
+
+//     componentDidMount(){
+//         console.log("Learn App Mounted");
+//     }
+
+//     componentWillUnmount(){
+//         console.log("Learn Unmounted");
+//     }
+    
+//     render(){
+//         return(
+//             <div>
+                
+//                 <h1>Hello Learn Component</h1>
+//                 <Employee />
+//             </div>
+//         )
+//     }
+// }
+
+
+// updating
+// export default class Learn extends Component{
+//     constructor(){
+//         super();
+//         this.state = {
+//             id : 101
+//         };
+//     }
+//     clickHandle=(id)=>{
+//         console.log("Button clicked");
+//         // this.setState({id:501});
+//         this.setState({ id: this.state.id + 2 });
         
-    };
-    render(){
-        console.log("Learn Rendering");
-        return(
-            <div>
-                <Employee id={this.state.id}/>
-                <button onClick ={this.clickHandle}>Change</button>
-            </div>
-        );
-    }
-}
+//     };
+//     render(){
+//         console.log("Learn Rendering");
+//         return(
+//             <div>
+//                 <Employee id={this.state.id}/>
+//                 <button onClick ={this.clickHandle}>Change</button>
+//             </div>
+//         );
+//     }
+// }
 
 
 // export default class Learn extends Component {
