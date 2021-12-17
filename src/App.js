@@ -11,15 +11,95 @@ import Learn from './components/Learn';
 import Custom from './components/Custom';
 
 export default class App extends Component{
-  render(){  
+  state = {
+    users: [
+      {id: 101, name: "Ayushii", password: "ab1234"},
+      {id: 102, name: "Piyaa", password: "nj455"},
+      {id: 103, name: "Ayuuuu", password: ""}
+    ],
+    isLoggedIn: false,
+  }
+  render(){
+    const newUsers = this.state.users.map((user)=>{
+      console.log(user)
+      return <h1>ID: {user.id} Name: {user.name} Password: {user.password}</h1>
+    })
     return(
-      <div>
-        <Custom primeMember = {true} />
-        {/* <Custom consumer={false}/> */}
-      </div>
+      <>
+        {newUsers}
+      {/* <h2>ID: {this.state.users[0].id} Name: {this.state.users[0].name} Password: {this.state.users[0].password} </h2>
+      <h2>ID: {this.state.users[1].id} Name: {this.state.users[1].name} Password: {this.state.users[1].password} </h2>
+      <h2>ID: {this.state.users[2].id} Name: {this.state.users[2].name} Password: {this.state.users[2].password} </h2> */}
+      </>
     )
   }
 }
+
+// export default class App extends Component{
+//   render(){
+//     const ArrValues = [10,20,30,40];
+//     return(
+//       <Custom numbers = {ArrValues} />
+//     )
+//   }
+// }
+
+// map method
+// export default class App extends Component{
+//   render(){
+//     const arr = [10,20,30,40,50]
+//     const newArr = arr.map((num)=>{
+//       console.log("Num=", num);
+//       return <li>{num*2}</li>;
+//     });
+//     console.log("OldArray = ", arr);
+//     console.log("NewArray = ", newArr);
+//     return(
+//       <ul>{newArr}</ul>
+//     )
+//   }
+// }
+
+// export default class App extends Component{
+//   render(){
+//     const arr = [10,20,30,40,50];
+//     return(
+//       <>
+//       <ul>
+//         <li>{arr[0] * 2}</li>
+//         <li>{arr[1] * 2}</li>
+//         <li>{arr[2] * 2}</li>
+//         <li>{arr[3] * 3}</li>
+//       </ul>
+//       {/* <Custom /> */}
+//       </>
+//     )
+//   }
+// }
+
+//  if else statement
+// export default class App extends Component{
+//   render(){
+//     return(
+//       <>
+//       <Custom />
+//       </>
+//     )
+//   }
+// }
+
+// using inline if
+// export default class App extends Component{
+//   render(){  
+//     return(
+//       <div>
+//         <Custom primeMember = {true}  />
+//         {/* <Custom consumer={false}/> */}
+//       </div>
+//     )
+//   }
+// }
+
 //  Custom hook
 // export default function App(){
 //   const data = useCostomCounter();
