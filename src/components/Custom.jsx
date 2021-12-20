@@ -2,19 +2,123 @@ import React, { Component } from 'react'
 import Guest from './Guest'
 import User from './User'
 
-export default class App extends Component{
-    render(){
-    const arr = this.props.numbers;
-      return(
-        <ul>
-        {/* {arr.map(num =>{
-          return <li>{num}</li>;
-        })} */} 
-          {arr.map(num => <li>{num}</li>)}
-        </ul>
-      )
-    }
+export default class Custom extends Component{
+  render(){
+    return(
+      <>
+     
+      </>
+    )
   }
+}
+
+// external css
+// export default class Custom extends Component{
+//   render(){
+//     return(
+//       <>
+//       <h1 className={this.props.color}>Hello Custom</h1>
+//       </>
+//     )
+//   }
+// }
+
+// inline css
+// export default class Custom extends Component{
+//   state = {
+//     change:false
+//   };
+//   clickHandle = () => {
+//     this.setState({change: true})
+//   };
+//    render(){
+//       const btnStyle = {
+//         color: "black",
+//         backgroundColor: "orange",
+//       };
+//       if ( this.state.change) {
+//         btnStyle.backgroundColor = "White"
+//       }
+       
+//       return(
+//         <>
+//         <button onClick={this.clickHandle} style={btnStyle}>Click Me</button>
+//         </>
+//       )
+//     }
+//   }
+
+// inline css
+// export default class Custom extends Component{
+//   render(){
+//     const txtc = {
+//       color: "green"
+//     }
+//     return(
+//       <h1 style={{...txtc, ...{fontSize: "120px"}}}>Hello World</h1>
+//     )
+//   }
+// }
+
+// inline css // ...value is a spread operator
+// export default class Custom extends Component{
+//   render(){
+//     const txtc = {
+//       color : "orange",
+//     }
+//     const txts = {
+//       fontSize : "80px"
+//     }
+//     return(
+//       <h1 style={{...txtc, ...txts}}>Hello Custom App</h1>
+//     )
+//   }
+// }
+// 
+
+// inline css
+// export default class Custom extends Component{
+//   render(){
+//     const btnStyle = {
+//       color: "black",
+//       backgroundColor: "orange",
+//     };
+//     return(
+//       <>
+//       <button style={btnStyle}>Click Me</button>
+//       </>
+//     )
+//   }
+// }
+
+// key in react
+// export default class Custom extends Component{
+//   render(){
+//     const arr = this.props.numbers;
+//     const newArr = arr.map(num => {
+//       return <User key={num} value={num} />;
+//     });
+//     return(
+//       <div>
+//         <ul>{newArr}</ul>     
+//       </div>
+//     )
+//   }
+// }
+
+// export default class Custom extends Component{
+//     render(){
+//     const arr = this.props.numbers;
+//       return(
+//         <ul>
+//         {/* {arr.map(num =>{
+//           return <li>{num}</li>;
+//         })} */} 
+//           {arr.map(num => <li>{num}</li>)}
+//         </ul>
+//       )
+//     }
+//   }
 
 // IIFE statement
 // export default class Custom extends Component{

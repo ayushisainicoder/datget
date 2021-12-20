@@ -1,39 +1,92 @@
-import './App.css';
-import Carts from './components/Carts';
-import Userdetail from './components/Userdetail';
-import Learning from './components/Learning';
-import Student from './components/Student';
-import React, { Component, useState, useEffect} from 'react'
-import Learn from './components/Learn';
+import "./App.css";
+// import Carts from "./components/Carts";
+// import Userdetail from "./components/Userdetail";
+// import Learning from "./components/Learning";
+// import Student from "./components/Student";
+import React, { Component, useState, useEffect } from "react";
+// import Learn from "./components/Learn";
 // import useCostomCounter from './components/Custom';
-// import User from './components/User';
+import User from './components/User';
 // import Guest from './components/Guest';
-import Custom from './components/Custom';
+import Custom from "./components/Custom";
+import Styles from "./App.module.css";
 
 export default class App extends Component{
-  state = {
-    users: [
-      {id: 101, name: "Ayushii", password: "ab1234"},
-      {id: 102, name: "Piyaa", password: "nj455"},
-      {id: 103, name: "Ayuuuu", password: ""}
-    ],
-    isLoggedIn: false,
-  }
   render(){
-    const newUsers = this.state.users.map((user)=>{
-      console.log(user)
-      return <h1>ID: {user.id} Name: {user.name} Password: {user.password}</h1>
-    })
     return(
       <>
-        {newUsers}
-      {/* <h2>ID: {this.state.users[0].id} Name: {this.state.users[0].name} Password: {this.state.users[0].password} </h2>
-      <h2>ID: {this.state.users[1].id} Name: {this.state.users[1].name} Password: {this.state.users[1].password} </h2>
-      <h2>ID: {this.state.users[2].id} Name: {this.state.users[2].name} Password: {this.state.users[2].password} </h2> */}
+      <h1 className={Styles.txt}>Hello World</h1>
+      < User />
       </>
     )
   }
 }
+
+// external css
+// export default class App extends Component{
+//   render(){
+//     return(
+//       <>
+//       <h1 className="txtp txts">Hellooo</h1>    
+//       </>
+//     )
+//   }
+// }
+
+// external css
+// export default class App extends Component{
+//   render(){
+//     let style= false;
+//     return(
+//       <>
+//       <h1 className="txtp">Hellooo</h1>
+//       <Custom color= {style ? "txtp" : "txtg"} />
+//       </>
+//     )
+//   }
+// }
+
+// key in react
+// export default class App extends Component {
+//   state = {
+//   arrValues:[10, 20, 30, 40]
+//   }
+//   render() {
+//     return (
+//       <>
+//       {console.log("not found")}
+//         <Custom numbers={this.state.arrValues} />
+//       </>
+//     );
+//   }
+// }
+
+// List (map method)
+// export default class App extends Component{
+//   state = {
+//     users: [
+//       {id: 101, name: "Ayushii", password: "ab1234"},
+//       {id: 102, name: "Piyaa", password: "nj455"},
+//       {id: 103, name: "Ayuuuu", password: "125ss"}
+//     ],
+//     isLoggedIn: false,
+//   }
+//   render(){
+//     const newUsers = this.state.users.map((user)=>{
+//       console.log(user)
+//       // key
+//       return <h1 Key={user.id}> ID: {user.id} Name: {user.name} Password: {user.password}</h1>
+//     })
+//     return(
+//       <>
+//         {newUsers}
+//       {/* <h2>ID: {this.state.users[0].id} Name: {this.state.users[0].name} Password: {this.state.users[0].password} </h2>
+//       <h2>ID: {this.state.users[1].id} Name: {this.state.users[1].name} Password: {this.state.users[1].password} </h2>
+//       <h2>ID: {this.state.users[2].id} Name: {this.state.users[2].name} Password: {this.state.users[2].password} </h2> */}
+//       </>
+//     )
+//   }
+// }
 
 // export default class App extends Component{
 //   render(){
@@ -90,7 +143,7 @@ export default class App extends Component{
 
 // using inline if
 // export default class App extends Component{
-//   render(){  
+//   render(){
 //     return(
 //       <div>
 //         <Custom primeMember = {true}  />
@@ -120,7 +173,7 @@ export default class App extends Component{
 //   const handleIncrement=()=>{
 //     setCount(count + 1);
 //   }
-  
+
 //   const handleDecrement=()=>{
 //     setCount1(count1 - 1);
 //   }
@@ -139,10 +192,9 @@ export default class App extends Component{
 //   )
 // }
 
-
 // function hooks
 // export default function App() {
-//   const [name, setName] = useState("Ayushhii"); 
+//   const [name, setName] = useState("Ayushhii");
 //   const [roll, setRoll_no] = useState(101)
 
 //   const handleClick=()=>{
@@ -150,28 +202,25 @@ export default class App extends Component{
 //     setName("Sainii");
 //     setRoll_no(105);
 //   };
-  
 
 //   return (
 //     <div>
 //       <h1>My name is {name}</h1>
 //       <h2>My roll no {roll}</h2>
 //       <button type="button" onClick={handleClick}>Change</button>
-      
+
 //     </div>
 //   );
 // }
 
-
-
 // export default class App extends Component {
-  
+
 //   render() {
 //     console.log("Main App Rendered")
 //     return (
-      
+
 //       <div>
-        
+
 //         <Learn name="I_am_Learn_prop"/>
 //         {/* <Student roll_no={106} /> */}
 //         {/* for function component */}
@@ -184,15 +233,12 @@ export default class App extends Component{
 
 //         {/* <Student name="Ayuusshhhiii" roll_no={100+2} />, */}
 //         {/* <Student>I am child</Student> */}
-        
+
 //         {/* <Learning />  */}
-//         {/* <Learning name="Nehaa"/> 
+//         {/* <Learning name="Nehaa"/>
 //         <Learning name="Parul" /> */}
 //       </div>
-      
-      
-        
-          
+
 //     );
 //   }
 // }
